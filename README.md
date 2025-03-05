@@ -3,7 +3,7 @@ Welcome to the project repository for team 6. Here you will find all of our pres
 We will be building an e-commerce site ASP.NET Core Blazor, with our data being stored in SQLite, that sells unique video game items. The project will allow users to create accounts to buy the items for sale, and it will contain admininstration capabilities to allow the administrator to add inventory and run sales reports.
 
 ## Project Plan
-### Meet our Team:
+### Resumes:
 - [Austin Hodge](/Resumes/AustinHodge.md)
 - Jay Jalla
 - Mark Cuzman
