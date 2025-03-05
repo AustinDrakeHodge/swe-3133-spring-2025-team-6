@@ -1,6 +1,6 @@
 # swe-3133-spring-2025-team-6
 Welcome to the project repository for team 6. Here you will find all of our presentations, documentation, and source code for our SWE 3313 class project.
-We will be building an e-commerce site ASP.NET Core Blazor, with our data being stored in SQLite, that sells unique video game items. The project will allow users to create accounts to buy the items for sale, and it will contain admininstration capabilities to allow the administrator to add inventory and run sales reports.
+We will be building an e-commerce site with Java Spring framework, with our data being stored in SQLite, that sells unique video game items. The project will allow users to create accounts to buy the items for sale, and it will contain admininstration capabilities to allow the administrator to add inventory and run sales reports.
 
 ## Project Plan
 ### Resumes:
