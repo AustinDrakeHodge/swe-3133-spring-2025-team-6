@@ -15,6 +15,6 @@ We began by deciding the language that best suited our experience. From there, w
 - Click [here](/Team%20Assignments.md) for the breakdown of our team assignments
 ### Technology Selection
 - We are building our application using C# ASP.NET through Blazor Server. We will be using SQLite to store the data for users, administrators, and the items that will be hosted on the website.
-- Click [here](/Technology%20Selection) for a more in-depth explanation and reasons for what technologies and tools we are using.
+- Click [here](/Technology%20Selection.md) for a more in-depth explanation and reasons for what technologies and tools we are using.
 ### Gantt Chart
 - Click [here](https://austinhodge.youtrack.cloud/gantt-charts/226-0) to view our project plan Gantt Chart in YouTrack
