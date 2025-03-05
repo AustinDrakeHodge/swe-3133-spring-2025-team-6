@@ -4,7 +4,7 @@ We will be building an e-commerce site ASP.NET Core Blazor, with our data being 
 
 ## Project Plan
 ### Meet our Team:
-- [Austin Hodge](https://github.com/AustinDrakeHodge/swe-3133-spring-2025-team-6/blob/main/Austin%20Hodge%20Resume)
+- [Austin Hodge](/Resumes/AustinHodge.md)
 - Jay Jalla
 - Mark Cuzman
 - Connor Craig
