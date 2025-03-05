@@ -13,7 +13,7 @@ We began by deciding the language that best suited our experience. From there, w
 ### Team Assignments
 - To ensure each member has a part of the project to focus on, we separated into four roles: Project Lead, Software Architect, Front-End Developer, and Back-End Developer
 - Click [here](/Team%20Assignments.md) for the breakdown of our team assignments
-### Technology Selection
+### Technology Description
 - We are building our application using C# ASP.NET through Blazor Server. We will be using SQLite to store the data for users, administrators, and the items that will be hosted on the website.
 - Click [here](/Technology%20Description.md) for a more in-depth explanation and reasons for what technologies and tools we are using.
 ### Gantt Chart
