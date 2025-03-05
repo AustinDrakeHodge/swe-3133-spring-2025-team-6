@@ -1,10 +1,10 @@
 # Technology Description
 ## Language
-- We chose C# for the language for its similarites to Java, and for its easier implementation for the framework.
-- https://learn.microsoft.com/en-us/dotnet/csharp/
+- We chose Java for the teams language as it is the one we collectively have the most experience in.
+- https://www.java.com/en/
 ## Framework
-- The framework we chose was Blazor due to its ease in combining the front and back end of the server base, as well as the more concise libraries available in the .NET environment.
-- https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor
+- The framework we chose was Spring due to its extensive libraries and documentation available for different needs.
+- https://spring.io/
 ## Storage plan
 - We chose SQLite as the storage plan because it allows more advanced querying capabilities.
 - https://www.sqlite.org/
