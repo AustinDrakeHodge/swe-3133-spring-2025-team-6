@@ -14,7 +14,7 @@ We began by deciding the language that best suited our experience. From there, w
 -The team was divided into 
 
 ### Technology Selection
--We are building our application using C# ASP.NET through Blazor Server. We will be using SQLite to store the data for users, administrators, and the items that will be hosted on the website.
--Click here for a more in-depth explanation and reasons for what technologies and tools we are using.
+- We are building our application using C# ASP.NET through Blazor Server. We will be using SQLite to store the data for users, administrators, and the items that will be hosted on the website.
+- Click [here](https://github.com/AustinDrakeHodge/swe-3133-spring-2025-team-6/blob/main/Technology%20Selection) for a more in-depth explanation and reasons for what technologies and tools we are using.
 ### Gantt Chart
--Click [here](https://austinhodge.youtrack.cloud/gantt-charts/226-0) to view our project plan Gantt Chart in YouTrack
+- Click [here](https://austinhodge.youtrack.cloud/gantt-charts/226-0) to view our project plan Gantt Chart in YouTrack
