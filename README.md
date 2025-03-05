@@ -5,7 +5,7 @@ We will be building an e-commerce site ASP.NET Core Blazor, with our data being 
 ## Project Plan
 ### Resumes:
 - [Austin Hodge](/Resumes/AustinHodge.md)
-- Jay Jalla
+- [Jay Jalla](/Resumes/JayJalla.md)
 - Mark Cuzman
 - Connor Craig
   
