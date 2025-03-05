@@ -11,8 +11,8 @@ We will be building an e-commerce site ASP.NET Core Blazor, with our data being 
   
 We began by deciding the language that best suited our experience. From there, we decided the framework and database storage that would be best suited for our needs, followed by the breakdown of roles for the project.
 ### Team Assignments
--The team was divided into 
-
+- To ensure each member has a part of the project to focus on, we separated into four roles: Project Lead, Software Architect, Front-End Developer, and Back-End Developer
+- Click [here](https://github.com/AustinDrakeHodge/swe-3133-spring-2025-team-6/blob/main/Team%20Assignments.md) for the breakdown of our team assignments
 ### Technology Selection
 - We are building our application using C# ASP.NET through Blazor Server. We will be using SQLite to store the data for users, administrators, and the items that will be hosted on the website.
 - Click [here](https://github.com/AustinDrakeHodge/swe-3133-spring-2025-team-6/blob/main/Technology%20Selection) for a more in-depth explanation and reasons for what technologies and tools we are using.
