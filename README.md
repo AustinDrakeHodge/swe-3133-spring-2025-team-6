@@ -14,7 +14,7 @@ We began by deciding the language that best suited our experience. From there, w
 - To ensure each member has a part of the project to focus on, we separated into four roles: Project Lead, Software Architect, Front-End Developer, and Back-End Developer
 - Click [here](/Team%20Assignments.md) for the breakdown of our team assignments
 ### Technology Description
-- We are building our application using C# ASP.NET through Blazor Server. We will be using SQLite to store the data for users, administrators, and the items that will be hosted on the website.
+- We are building our application using Java and implementing it with the Spring framework. We will be using SQLite to store the data for users, administrators, and the items that will be hosted on the website.
 - Click [here](/Technology%20Description.md) for a more in-depth explanation and reasons for what technologies and tools we are using.
 ### Gantt Chart
 - Click [here](https://austinhodge.youtrack.cloud/gantt-charts/226-0) to view our project plan Gantt Chart in YouTrack
