@@ -19,4 +19,4 @@ We began by deciding the language that best suited our experience. From there, w
 ### Gantt Chart
 - Click [here](https://austinhodge.youtrack.cloud/gantt-charts/226-0) to view our project plan Gantt Chart in YouTrack
 ### Video Submissions
-- Click here to view our videos that will be updated with each step of our project
+- Click [here](/Videos/Planning) to view our videos that will be updated with each step of our project
