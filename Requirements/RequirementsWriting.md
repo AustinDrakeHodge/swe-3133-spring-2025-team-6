@@ -10,7 +10,7 @@
   - <b>Priority:</b> Must Have
   - <b>Estimated Effort:</b> 1.5 days
   - <b>Functional or Non-Functional:</b> Functional
-  - <b>Story Description:</b> The system must allow an admin to create, update, and delete user accounts.
+  - <b>Story Description:</b> The system must allow an admin to create, update, and delete user/admin accounts.
 - ## T6S-3: Basic User Profile Management
   - <b>Priority:</b> Must Have
   - <b>Estimated Effort:</b> 1.5 days
