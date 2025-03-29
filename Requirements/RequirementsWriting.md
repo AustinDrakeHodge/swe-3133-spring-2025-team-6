@@ -20,7 +20,7 @@
   - <b>Priority:</b> Must Have
   - <b>Estimated Effort:</b> 1 day
   - <b>Functional or Non-Functional:</b> Functional
-  - <b>Story Description:</b> Implement session tracking, allowing users to stay logged in and automatically log them out after inactivity.
+  - <b>Story Description:</b> Implement session tracking, allowing users to stay logged in and save the contents of their shopping cart.
 
 # Milestone: Product Purchasing
 ## T6E-2: Inventory Display & Shopping Cart
