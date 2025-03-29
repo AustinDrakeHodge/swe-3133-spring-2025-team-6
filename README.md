@@ -30,3 +30,4 @@ Here in the requirements phase of our project, we will discuss the needs and wan
 ### Decision Table
 - [Decision Table](/Requirements/DecisionTable.md)
 ### Requirements Presentation
+- [Requirement's Video](/Videos/Requirements.md)
