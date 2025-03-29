@@ -74,7 +74,7 @@
   - <b>Functional or Non-Functional:</b> Functional
   - <b>Story Description:</b> Admins must be able to view, update, and delete orders through a dashboard.
 
-# Total days for Version 1 required: 24 MIN - 27 MAX
+### Total days for Version 1 required: 24 MIN - 27 MAX
 # Version 2.0
 # Milestone: User Experience Improvements
 ## T6E-5: Enhanced User Experience
@@ -120,4 +120,4 @@
   - <b>Functional or Non-Functional:</b> Non-Functional
   - <b>Story Description:</b> Implement caching for frequently accessed pages to improve speed and reduce database queries.
 
-# Total days for Version 2 required: 32 MIN - 37 MAX
+### Total days for Version 2 required: 32 MIN - 37 MAX
