@@ -6,7 +6,6 @@ We will be building an e-commerce site with Java Spring framework, with our data
 ### Resumes:
 - [Austin Hodge](/Resumes/AustinHodge.md)
 - [Jay Jalla](/Resumes/JayJalla.md)
-- [Mark Cuzman](/Resumes/MarkCuzman.md)
 - [Connor Craig](/Resumes/ConnorCraig.md)
   
 We began by deciding the language that best suited our experience. From there, we decided the framework and database storage that would be best suited for our needs, followed by the breakdown of roles for the project.
