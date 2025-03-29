@@ -20,3 +20,13 @@ We began by deciding the language that best suited our experience. From there, w
 - Click [here](https://austinhodge.youtrack.cloud/gantt-charts/226-0) to view our project plan Gantt Chart in YouTrack
 ### Video Submissions
 - Click [here](/Videos/Planning.md) to view our videos that will be updated with each step of our project
+
+## Requirements
+
+### Requirements Writing
+
+### Use Case Diagram
+
+### Decision Table
+
+### Requirements Presentation
