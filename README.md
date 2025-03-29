@@ -24,7 +24,7 @@ We began by deciding the language that best suited our experience. From there, w
 ## Requirements
 
 ### Requirements Writing
-
+- [Requirements Writing](/Requirements/Requirements Writings.md)
 ### Use Case Diagram
 - [Use Case Diagram](/Requirements/UseCaseDiagram.png)
 ### Decision Table
