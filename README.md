@@ -28,5 +28,5 @@ Here in the requirements phase of our project, we will discuss the needs and wan
 ### Use Case Diagram
 - [Use Case Diagram](/Requirements/UseCaseDiagram.png)
 ### Decision Table
-- [Decision Table](/Requirements/DecisionTable.png)
+- [Decision Table](/Requirements/DecisionTable.md)
 ### Requirements Presentation
