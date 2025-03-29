@@ -55,40 +55,50 @@
   - <b>Estimated Effort:</b> 1 day
   - <b>Functional or Non-Functional:</b> Functional
   - <b>Story Description:</b> The system will give the grand total by adding together the subtotal, subtotal multiplied by tax, and the shipping cost in the data format $x,xxx.xx. After payment, users must receive an order confirmation page and an email receipt.
+- ## T6S-11: Automated Inventory Management
+  - <b>Priority:</b> Must Have
+  - <b>Estimated Effort:</b> 3 days
+  - <b>Functional or Non-Functional:</b> Functional
+  - <b>Story Description:</b> Automated removal of out-of-stock items from public listing.
 
 # Milestone: Security & Performance Essentials
 ## T6E-4: Basic Security & Optimization
-- ## T6S-11: Basic Input Validation & Error Handling
+- ## T6S-12: Basic Input Validation & Error Handling
   - <b>Priority:</b> Must Have
   - <b>Estimated Effort:</b> 1.5 days
   - <b>Functional or Non-Functional:</b> Non-Functional
   - <b>Story Description:</b> Implement validation for user inputs (e.g., password strength, valid email format) and proper error handling.
-- ## T6S-12: Database Optimization
+- ## T6S-13: Database Optimization
   - <b>Priority:</b> Must Have
   - <b>Estimated Effort:</b> 2 days
   - <b>Functional or Non-Functional:</b> Non-Functional
   - <b>Story Description:</b> Ensure queries are optimized for SQLite performance, including indexing frequently queried fields.
-- ## T6S-13: Admin Dashboard for Order Management
+- ## T6S-14: Admin Dashboard for Order Management
   - <b>Priority:</b> Must Have
   - <b>Estimated Effort:</b> 2 days
   - <b>Functional or Non-Functional:</b> Functional
-  - <b>Story Description:</b> Admins must be able to view, update, and delete orders through a dashboard.
+  - <b>Story Description:</b> Admins must be able to view orders and print out sales reports.
+- ## T6S-15: Admin Dashboard for User to Admin Creation
+  - <b>Priority:</b> Wants to Have
+  - <b>Estimated Effort:</b> 1 days
+  - <b>Functional or Non-Functional:</b> Functional
+  - <b>Story Description:</b> Admins will have a page to be able to update user accounts to administrator accounts.
 
 ### Total days for Version 1 required: 24 MIN - 27 MAX
 # Version 2.0
 # Milestone: User Experience Improvements
 ## T6E-5: Enhanced User Experience
-- ## T6S-14: Wishlist Feature
+- ## T6S-16: Wishlist Feature
   - <b>Priority:</b> Should Have
   - <b>Estimated Effort:</b> 2 days
   - <b>Functional or Non-Functional:</b> Functional
   - <b>Story Description:</b> Users must be able to add items to a wishlist for later purchase.
-- ## T6S-15: Order Tracking
+- ## T6S-17: Order Tracking
   - <b>Priority:</b> Should Have
   - <b>Estimated Effort:</b> 3 days
   - <b>Functional or Non-Functional:</b> Functional
   - <b>Story Description:</b> Users must be able to track order status (Processing, Shipped, Delivered) on a dashboard.
-- ## T6S-16: Customer Reviews & Ratings
+- ## T6S-18: Customer Reviews & Ratings
   - <b>Priority:</b> Should Have
   - <b>Estimated Effort:</b> 4 days
   - <b>Functional or Non-Functional:</b> Functional
@@ -101,20 +111,15 @@
   - <b>Estimated Effort:</b> 5 days
   - <b>Functional or Non-Functional:</b> Functional
   - <b>Story Description:</b> Verified users can list their own unique video game items for sale, and admins must approve listings.
-- ## T6S-20: Automated Inventory Management
-  - <b>Priority:</b> Could Have
-  - <b>Estimated Effort:</b> 3 days
-  - <b>Functional or Non-Functional:</b> Functional
-  - <b>Story Description:</b> Low-stock notifications and automated removal of out-of-stock items from public listing.
 
 # Milestone: Security & Performance Enhancements
 ## T6E-8: Security & Performance Upgrades
-- ## T6S-21: Two-Factor Authentication
+- ## T6S-20: Two-Factor Authentication
   - <b>Priority:</b> Should Have
   - <b>Estimated Effort:</b> 3 days
   - <b>Functional or Non-Functional:</b> Non-Functional
   - <b>Story Description:</b> Users can enable 2FA via email or authenticator app for added account security.
-- ## T6S-22: Caching for Faster Loading
+- ## T6S-21: Caching for Faster Loading
   - <b>Priority:</b> Should Have
   - <b>Estimated Effort:</b> 2 days
   - <b>Functional or Non-Functional:</b> Non-Functional
