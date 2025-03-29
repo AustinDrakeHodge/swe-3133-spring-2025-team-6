@@ -22,7 +22,7 @@ We began by deciding the language that best suited our experience. From there, w
 - Click [here](/Videos/Planning.md) to view our videos that will be updated with each step of our project
 
 ## Requirements
-
+Here in the requirements phase of our project, we will discuss the needs and wants of our customer. In our requirements writing, we separate each requirement by assigning them a priority, an estimated effort, and deciding whether they are functional/non-functional, and we group them based on their epics or stories that they are related to. Our use case diagram outlines the users and interactions they have with the system. Finally, our decision table maps the condition of the users to what actions they must/may take next. View our video at the bottom to be able to get a summary of this process.
 ### Requirements Writing
 - [Requirements Writing](/Requirements/RequirementsWriting.md)
 ### Use Case Diagram
