@@ -1,7 +1,8 @@
-Version 1.0
-T6E-1: User Account Management
-T6S-1: User Registration and Login
-Priority: Must Have
+# Version 1.0
+
+## T6E-1: User Account Management
+- ## T6S-1: User Registration and Login
+  - <b>Priority:</b> Must Have
 Estimated Effort: 2 days
 Functional or Non-Functional: Functional
 Story Description: The system must allow users to register an account using their email and password and log in securely.
