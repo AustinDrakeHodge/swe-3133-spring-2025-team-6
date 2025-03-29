@@ -54,7 +54,7 @@
   - <b>Priority:</b> Must Have
   - <b>Estimated Effort:</b> 1 day
   - <b>Functional or Non-Functional:</b> Functional
-  - <b>Story Description:</b> After payment, users must receive an order confirmation page and an email receipt.
+  - <b>Story Description:</b> The system will give the grand total by adding together the subtotal, subtotal multiplied by tax, and the shipping cost in the data format $x,xxx.xx. After payment, users must receive an order confirmation page and an email receipt.
 
 # Milestone: Security & Performance Essentials
 ## T6E-4: Basic Security & Optimization
