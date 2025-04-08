@@ -34,4 +34,4 @@ Here in the requirements phase of our project, we will discuss the needs and wan
 ## User Interface Design
 Below is a high-fidelity design of the user interface that the client can expect. In this design, the client can click through the different pages and features of the site such as login, signup, admin, logistics, checkout, items, and more.
 - Our design in Marvel can be seen by clicking [here](https://marvelapp.com/prototype/34188036)
-- If you don't feel like going through all the steps, watch our walkthrough [here]
+- If you don't feel like going through all the steps, watch our walkthrough [here](/Videos/UiDesign.md)
