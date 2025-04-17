@@ -8,14 +8,14 @@ Our project is built using **Java** with the **Spring Framework**. We chose Spri
 
 ## Data Storage Plan
 
-We use **SQLite** for persistent data storage, accessed via **Spring Data JPA**. Our app follows a layered architecture:
+We will be using **SQLite** through **Spring Data JPA**. Our app will have the following architecture:
 
 - **Model layer** maps to database entities.
 - **Repository layer** handles basic data operations.
 - **Service layer** manages business logic.
 - **Controller layer** exposes REST endpoints.
 
-All data operations are handled via repositories with default annotations. SQLite is stored as a file (`database.db`) and auto-generated on application startup if missing.
+All data operations are handled using repositories with default annotations. SQLite is stored as a file (`database.db`) and auto-generated on application startup.
 
 https://www.tutorialspoint.com/sqlite/
 https://docs.spring.io/spring-boot/index.html
