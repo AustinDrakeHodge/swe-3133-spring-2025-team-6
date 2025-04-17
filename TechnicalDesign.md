@@ -63,11 +63,18 @@ https://restfulapi.net/
 ## Example Data
 
 ### Users
-[
-  { "id": 1, "name": "Dragon Slayer Sword", "description": "Legendary weapon", "price": 299.99, "seller_id": 2 },
-  { "id": 2, "name": "Shadow Armor", "description": "Stealth-enhancing armor", "price": 149.50, "seller_id": 2 }
-]
 
+| ID | Username   | Email                 | Password (Hashed)        | Role     | Date Joined |
+|----|------------|-----------------------|---------------------------|----------|-------------|
+| 1  | gamerZack  | zack@gamemail.com     | $2a$10$abc123...          | customer | 2024-12-01  |
+| 2  | devAnna    | anna@devmail.com      | $2a$10$def456...          | admin    | 2024-12-05  |
+| 3  | playerOne  | player1@gamehub.net   | $2a$10$ghi789...          | customer | 2025-01-02  |
+| 4  | ghostNinja | ninja@shadowmail.org  | $2a$10$jkl000...          | customer | 2025-01-15  |
+
+**Notes:**
+- `ID`: Primary key
+- `Password`: Hash/encrypted
+- `Role`: Can be `admin` or `customer`
 
 ## Seed Data
 
