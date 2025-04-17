@@ -4,7 +4,6 @@
 
 Our project is built using **Java** with the **Spring Framework**. We chose Spring for its robust support of MVC architecture, integrated database tools (Spring Data JPA), and ease of scalability. SQLite is used as the database because of its lightweight nature and easy setup, which makes it ideal for small to mid-scale applications.
 
-https://docs.github.com/en/actions
 ---
 
 ## Data Storage Plan
