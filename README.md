@@ -37,3 +37,10 @@ Below is a high-fidelity design of the user interface that the client can expect
 - If you don't feel like going through all the steps, watch our walkthrough [here](/Videos/UiDesign.md)
 
 ## Technical Design
+Now that we have specified the requirements of the system and created a high fidelity mockup, it is time to detail how critical system components will be made. In this section of the project we have finalized the framework, coding language, and database that we will use. Along with that, we have created an Entity Relationship Diagram, Field Description Tables, Example Data, Seed Data, and Annotation Rules.
+### Technical Design Writing
+- [Technical Design Writing](/TechnicalDesign.md)
+### Entity Relationship Diagram
+- link here
+### Technical Design Video
+- link here
