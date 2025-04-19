@@ -125,7 +125,7 @@ https://restfulapi.net/
 
 ---
 
-## Example Data
+# Example Data
 
 ## User Table
 |   UserID | Username   | Password   | Email                 | isAdmin   |
@@ -154,14 +154,14 @@ https://restfulapi.net/
 |           4 |        4 | images/dragon_shield.png  |
 |           5 |        5 | images/mana_potion.png    |
 
-##Cart Table
-|   CartID |   UserID |   CartItemID | isCheckedOut   |
-|----------|----------|--------------|----------------|
-|        1 |        2 |            1 | False          |
-|        2 |        3 |            2 | True           |
-|        3 |        4 |            3 | False          |
-|        4 |        5 |            4 | False          |
-|        5 |        1 |            5 | True           |
+## Cart Table
+|   CartID |   UserID |   isCheckedOut |
+|----------|----------|--------------|
+|        1 |        2 |  False          1 | 
+|        2 |        3 |  True          2 | 
+|        3 |        4 |  False          3 | 
+|        4 |        5 |  False          4 | 
+|        5 |        1 |  True          5 | 
 
 ## CartItem Table
 |   CartItemID |   CartID |   ItemID |
@@ -184,11 +184,11 @@ https://restfulapi.net/
 ## PaymentInformation Table
 |   PaymentID |   CreditCardNumber |   ExpirationMonth |   ExpirationYear |   CVV | PhoneNumber   |
 |-------------|--------------------|-------------------|------------------|-------|---------------|
-|           1 |   1234567890123456 |                 5 |             2025 |   123 | 555-123-4567  |
-|           2 |   2345678901234567 |                 6 |             2026 |   234 | 555-234-5678  |
-|           3 |   3456789012345678 |                 7 |             2027 |   345 | 555-345-6789  |
-|           4 |   4567890123456789 |                 8 |             2028 |   456 | 555-456-7890  |
-|           5 |   5678901234567890 |                 9 |             2029 |   567 | 555-567-8901  |
+|           1 |  1234-5678-9012-3456 |                 5 |             2025 |   123 | 555-123-4567  |
+|           2 |  2345-6789-0123-4567 |                 6 |             2026 |   234 | 555-234-5678  |
+|           3 |  3456-7890-1234-5678 |                 7 |             2027 |   345 | 555-345-6789  |
+|           4 |  4567-8901-2345-6789 |                 8 |             2028 |   456 | 555-456-7890  |
+|           5 |  5678-9012-3456-7890 |                 9 |             2029 |   567 | 555-567-8901  |
 
 ## Order Table
 |   OrderID |   UserID |   CartID |   ShippingID |   PaymentID |   Subtotal |   Tax |   GrandTotal |   Last4CC | OrderTime   |
