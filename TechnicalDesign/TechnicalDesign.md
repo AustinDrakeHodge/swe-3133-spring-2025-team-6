@@ -136,7 +136,7 @@ https://restfulapi.net/
 |        4 | SwordHero  | slash000   | hero@example.com      | True      |
 |        5 | ShieldBoi  | block999   | defender@example.com  | False     |
 
-## Inventory Table
+## InventoryItem Table
 |   ItemID |   UserID | ItemName       |   Price | Description                              | Type       | isSold   |
 |----------|----------|----------------|---------|------------------------------------------|------------|----------|
 |        1 |        1 | Master Sword   |  299.99 | Legendary sword with magical properties. | Sword      | False    |
@@ -145,7 +145,7 @@ https://restfulapi.net/
 |        4 |        4 | Dragon Shield  |  199.99 | Provides high defense against fire.      | Shield     | False    |
 |        5 |        5 | Mana Potion    |   17.50  | Restores 30 MP.                          | Potion     | False    |
 
-## Picture Table
+## ItemPicture Table
 |   PictureID |   ItemID | FilePath                  |
 |-------------|----------|---------------------------|
 |           1 |        1 | images/master_sword.png   |
