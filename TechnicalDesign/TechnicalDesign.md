@@ -31,18 +31,58 @@ https://restfulapi.net/
 
 ---
 
-## Example Data
+## [Example Data](/TechnicalDesign/ExampleData.md)
 
 ---
 
 ## Seed Data
 
-INSERT INTO user (id, username, email, password_hash, role)
-VALUES (1, 'gamer123', 'gamer@example.com', '...', 'buyer');
+### How to Use .sql Files with Spring Data JPA and SQLite
+### Setup Checklist:
+Spring Boot project with dependencies:
 
-INSERT INTO item (id, name, description, price, seller_id)
-VALUES (1, 'Dragon Slayer Sword', 'Legendary weapon', 299.99, 2);
+spring-boot-starter-data-jpa
 
+SQLite JDBC driver (e.g., org.xerial:sqlite-jdbc)
+
+application.properties or application.yml configured to use SQLite
+
+SQL files:
+
+[ItemShopCreateTables.sql](/TechnicalDesign/ItemShopCreateTables.sql) – for creating tables
+
+[ItemShopInsertData.sql](/TechnicalDesign/ItemShopInsertData.sql) – for inserting sample data
+
+### Step-by-Step Integration
+1. Add SQLite JDBC Dependency
+
+xml
+Copy
+Edit
+<dependency>
+    <groupId>org.xerial</groupId>
+    <artifactId>sqlite-jdbc</artifactId>
+    <version>3.36.0.3</version>
+</dependency>
+
+2. Create Your SQL Files
+In your src/main/resources folder, add:
+
+[ItemShopCreateTables.sql](/TechnicalDesign/ItemShopCreateTables.sql) → All your CREATE TABLE statements
+
+[ItemShopInsertData.sql](/TechnicalDesign/ItemShopInsertData.sql) → All your INSERT INTO statements
+
+3. Configure application.properties
+properties
+Copy
+Edit
+spring.datasource.url=jdbc:sqlite:mydatabase.db
+spring.datasource.driver-class-name=org.sqlite.JDBC
+spring.datasource.initialization-mode=always
+spring.jpa.hibernate.ddl-auto=none
+spring.jpa.show-sql=true
+
+---
 
 ## Annotation Rules:
 
