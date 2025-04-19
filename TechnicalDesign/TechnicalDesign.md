@@ -140,10 +140,10 @@ https://restfulapi.net/
 |   ItemID |   UserID | ItemName       |   Price | Description                              | Type       | isSold   |
 |----------|----------|----------------|---------|------------------------------------------|------------|----------|
 |        1 |        1 | Master Sword   |  299.99 | Legendary sword with magical properties. | Sword      | False    |
-|        2 |        2 | Book of Flames |  150    | A magic book that casts fire spells.     | Magic Book | False    |
+|        2 |        2 | Book of Flames |  150.00    | A magic book that casts fire spells.     | Magic Book | False    |
 |        3 |        3 | Healing Potion |   19.99 | Restores 50 HP.                          | Potion     | True     |
 |        4 |        4 | Dragon Shield  |  199.99 | Provides high defense against fire.      | Shield     | False    |
-|        5 |        5 | Mana Potion    |   17.5  | Restores 30 MP.                          | Potion     | False    |
+|        5 |        5 | Mana Potion    |   17.50  | Restores 30 MP.                          | Potion     | False    |
 
 ## Picture Table
 |   PictureID |   ItemID | FilePath                  |
@@ -157,11 +157,11 @@ https://restfulapi.net/
 ## Cart Table
 |   CartID |   UserID |   isCheckedOut |
 |----------|----------|--------------|
-|        1 |        2 |  False          1 | 
-|        2 |        3 |  True          2 | 
-|        3 |        4 |  False          3 | 
-|        4 |        5 |  False          4 | 
-|        5 |        1 |  True          5 | 
+|        1 |        2 |  False        | 
+|        2 |        3 |  True         | 
+|        3 |        4 |  False        | 
+|        4 |        5 |  False        | 
+|        5 |        1 |  True         | 
 
 ## CartItem Table
 |   CartItemID |   CartID |   ItemID |
@@ -175,11 +175,11 @@ https://restfulapi.net/
 ## ShippingInformation Table
 |   ShippingID | AddressLine      | City           | State   |   ZipCode | Country        | ShippingSpeed   |   ShippingCost |
 |--------------|------------------|----------------|---------|-----------|----------------|-----------------|----------------|
-|            1 | 123 Triforce Ln  | Hyrule         | Central |     12345 | Hyrule Kingdom | Fast            |           5.99 |
-|            2 | 456 Magic Rd     | Kakariko       | East    |     23456 | Hyrule Kingdom | Standard        |           2.99 |
-|            3 | 789 Healing Blvd | Gerudo         | West    |     34567 | Hyrule Kingdom | Express         |           7.99 |
-|            4 | 321 Shield St    | Death Mountain | North   |     45678 | Hyrule Kingdom | Overnight       |           9.99 |
-|            5 | 654 Mana Ave     | Zora's Domain  | South   |     56789 | Hyrule Kingdom | Standard        |           2.99 |
+|            1 | 123 Triforce Ln  | Hyrule         | Central       |     12345 | Hyrule Kingdom              | Overnight      |           29.00 |
+|            2 | 456 Magic Rd     | Los Angeles    | California    |     23456 | United States of America    | Ground        |           0.00 |
+|            3 | 789 Healing Blvd | Holly Springs  | Georgia          |     34567 | United States of America | 3-day         |           19.00 |
+|            4 | 321 Shield St    | New York City | New York          |     45678 | United States of America | Overnight     |           29.00 |
+|            5 | 654 Mana Ave     | Jacksonville  | Florida          |     56789 | United States of America  | 3-day         |           19.00 |
 
 ## PaymentInformation Table
 |   PaymentID |   CreditCardNumber |   ExpirationMonth |   ExpirationYear |   CVV | PhoneNumber   |
@@ -208,10 +208,6 @@ https://restfulapi.net/
 |             4 |         4 |        5 |
 |             5 |         5 |        4 |
 
-**Notes:**
-- `ID`: Primary key
-- `Password`: Hash/encrypted
-- `Role`: Can be `admin` or `customer`
 
 ## Seed Data
 
