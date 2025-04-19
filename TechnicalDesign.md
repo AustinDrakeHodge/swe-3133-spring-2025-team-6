@@ -18,8 +18,11 @@ We will be using **SQLite** through **Spring Data JPA**. Our app will have the f
 All data operations are handled using repositories with default annotations. SQLite is stored as a file (`database.db`) and auto-generated on application startup.
 
 https://www.tutorialspoint.com/sqlite/
+
 https://docs.spring.io/spring-boot/index.html
+
 https://github.com/xerial/sqlite-jdbc
+
 https://restfulapi.net/
 
 ---
