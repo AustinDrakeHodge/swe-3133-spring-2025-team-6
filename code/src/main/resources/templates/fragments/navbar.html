@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="top-bar">
+    <div class="left-section">
+        <img src="/images/geared_up_logo.png" alt="GearedUp Logo" class="logo">
+        <div class="nav-links">
+            <a href="/main" class="nav-link">Home</a>
+
+            <span th:if="${user != null and user.isAdmin()}">
+                <a href="/admin/add_inventory" class="nav-link">Add Inventory</a>
+                <a href="/admin/promote_user" class="nav-link">Promote User</a>
+                <a href="/admin/view_sales" class="nav-link">Sales</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="right-section">
+        <a href="/cart">
+            <img src="/images/cart.png" class="cart-icon" alt="Cart">
+        </a>
+
+        <div class="dropdown">
+            <button class="dropdown-button">
+                <span th:if="${user != null}" th:text="${user.username}"></span>
+                <span th:if="${user == null}">Guest</span>
+            </button>
+            <div class="dropdown-content">
+                <a th:href="@{/login}">Log out</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

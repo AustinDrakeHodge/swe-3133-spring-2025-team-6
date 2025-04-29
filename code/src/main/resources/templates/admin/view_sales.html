@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales Report</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="top-bar">
+    <div class="left-section">
+            <a th:href="@{/main}" class="nav-link">Home</a>
+            <a href="/admin/add_inventory" class="nav-link">Add Inventory</a>
+            <a href="/admin/promote_user" class="nav-link">Promote User</a>
+            <a href="/admin/view_sales" class="nav-link">Sales</a>
+    </div>
+</div>
+
+<!-- Page Content -->
+<div class="page-content">
+    <h1>Sales Report</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Price</th>
+                <th>Purchased By</th>
+                <th>View Receipt</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="sale : ${sales}">
+                <td th:text="${sale.itemName}"></td>
+                <td th:text="'$' + ${sale.price}"></td>
+                <td th:text="${sale.username}"></td>
+                <td><a th:href="@{/admin/receipt/{orderId}(orderId=${sale.orderId})}">View</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a th:href="@{/admin/sales/export}">
+        <button class="button">Export to CSV</button>
+    </a>
+</div>
+
+</body>
+</html>

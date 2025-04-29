@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<h1>Edit Item</h1>
+
+<form th:action="@{/admin/update}" method="post" enctype="multipart/form-data" class="form-container">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+    <input type="hidden" th:name="id" th:value="${item.getId()}" />
+
+    <label>
+        Name:
+        <input type="text" name="name" th:value="${item.getName()}" required />
+    </label>
+    <p/>
+
+    <label>
+        Description: <br />
+        <textarea rows="8" cols="100" name="description"><span th:text="${item.getDescription()}" th:remove="tag">description</span></textarea>
+    </label>
+    <p/>
+
+    <label>
+        Price:
+        <input type="text" name="price" th:value="${item.getPrice()}" required />
+    </label>
+    <p/>
+
+    <div class="form-group">
+        <label for="itemType">Item Type:</label>
+        <select id="itemType" name="itemTypeId" required class="input-field">
+            <option th:each="type : ${itemTypes}"
+                    th:value="${type.id}"
+                    th:text="${type.typeName}"
+                    th:selected="${type.id==item.getItemType().id}">
+            </option>
+        </select>
+    </div>
+    <p/>
+
+    <div class="form-group">
+        <label for="imageFile">Upload Item Image:</label>
+        <input type="file" id="imageFile" name="imageFile" accept="image/*" class="input-field" />
+        <br/><i>*Leave blank if you want to keep the same image as before.</i>
+    </div>
+    <p/>
+
+    <hr/>
+    <button type="submit">Update Item</button>
+
+
+</form>
+
+
+
+
+
+<!--<div th:text="${item.getName()}">Name</div>-->
+<p/>
+<a href="/main">Cancel</a>
+
+</body>
+</html>

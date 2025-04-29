@@ -1,0 +1,205 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.user-table {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.delete-button, .update-link {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  /*optional*/
+  font-family: arial, sans-serif;
+  /*input has OS specific font-family*/
+  color: #069;
+  text-decoration: underline;
+  cursor: pointer;
+    font-size: small;
+}
+
+/* Top banner */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 5px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.cart-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Site Title */
+.site-title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Search bar */
+.search-filters-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.dark-button {
+    padding: 8px 15px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Items container */
+.items-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Each item */
+.item-card {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.item-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Flexbox for image and details */
+.item-content {
+    display: flex;
+    align-items: center;
+}
+
+/* Image settings */
+.item-image img {
+    max-width: 200px;
+    max-height: 150px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+
+/* Details */
+.item-details {
+    flex-grow: 1;
+}
+
+.item-price {
+    display: block;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+/* Line separator */
+.item-separator {
+    margin-top: 20px;
+    border: 0;
+    height: 1px;
+    background: #ccc;
+}
+
+/* Checkout button */
+.checkout-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.checkout-button {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+/* Full-page layout for login/register */
+.auth-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Centered login/register container */
+.login-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+    padding: 40px 0;
+}
+
+/* Box styling for login/register forms */
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+/* Form inputs inside login/register */
+.auth-form input[type="text"],
+.auth-form input[type="password"],
+.auth-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Submit button inside login/register */
+.auth-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.auth-button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer at the bottom */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+.logo {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}

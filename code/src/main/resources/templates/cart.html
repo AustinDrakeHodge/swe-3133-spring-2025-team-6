@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>GearedUp - Shopping Cart</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<!-- Top Banner -->
+<div th:replace="fragments/navbar :: body"></div>
+<h1>Your Shopping Cart</h1>
+
+<div th:if="${#lists.isEmpty(cartItems)}">
+    <p>Your cart is empty!</p>
+</div>
+
+<div th:each="cartItem : ${cartItems}">
+    <h2 th:text="${cartItem.item.name}">Item Name</h2>
+    <p th:text="'$' + ${cartItem.item.price}">Price</p>
+    <form th:action="@{/cart/remove}" method="post">
+        <input type="hidden" name="cartItemId" th:value="${cartItem.id}" />
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+        <button type="submit">Remove</button>
+    </form>
+    <hr/>
+</div>
+
+Subtotal: <span th:text="${subTotal}">Subtotal</span>
+<br />
+<br />
+
+<a href="/main">Continue Shopping</a> | <a href="/checkout">Checkout</a>
+
+</body>
+</html>

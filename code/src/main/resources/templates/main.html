@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>GearedUp - Inventory</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- Top Banner -->
+<div th:replace="fragments/navbar :: body"></div>
+
+<!-- Site Title -->
+<h1 class="site-title">GearedUp</h1>
+
+<!-- Search Bar and Filters Section -->
+<div class="search-filters-container">
+    <form action="/main/search" method="get" class="search-bar">
+        <input type="text" name="keyword" placeholder="Search inventory..." />
+        <button type="submit" class="dark-button">Search</button>
+    </form>
+</div>
+
+<!-- Items Section -->
+<div class="items-container">
+    <div th:each="item : ${items}" class="item-card">
+    <div class="item-image">
+        <img th:if="${item.pictures != null and !item.pictures.isEmpty()}" th:src="${item.pictures.getLast().imageUrl}" alt="Item image" />
+        <img th:unless="${item.pictures != null and !item.pictures.isEmpty()}" src="/images/default-placeholder.png" alt="No Image Available" />
+    </div>
+    <div class="item-details">
+        <h3 th:text="${item.name}">Item Name</h3>
+        <form action="/admin/delete" method="post" class="delete-item-button" th:if="${user.isAdmin()}">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+            <input type="hidden" name="id" th:value="${item.id}" />
+            <a th:href="@{/admin/update/{itemId}(itemId=${item.getId()})}" class="update-link">(Edit Item)</a>
+            |
+            <button type="submit" class="delete-button">(Delete Item)</button>
+        </form>
+
+        <p th:text="${item.description}">Description</p>
+        <span th:text="'$' + ${#numbers.formatDecimal(item.price, 1, 'COMMA', 2, 'POINT')}">Price</span>
+
+      <form action="/cart/add" method="post">
+    <input type="hidden" name="itemId" th:value="${item.id}" />
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+    <button type="submit" class="add-to-cart-button">Add to Cart</button>
+</form>
+    </div>
+</div>
+</div>
+
+</body>
+</html>

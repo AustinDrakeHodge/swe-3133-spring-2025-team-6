@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Register - GearedUp</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- Top Banner -->
+<div class="top-bar">
+  <div class="left-section">
+    <img src="/images/geared_up_logo.png" alt="GearedUp Logo" class="logo">
+  </div>
+  <div class="right-section">
+    <a href="/login" class="dark-button">Login</a> <!-- Right side button -->
+  </div>
+</div>
+
+<!-- Register Form Section -->
+<div class="login-container">
+  <div class="login-box">
+    <h2>Register</h2>
+    <p>Join the GearedUp community!</p>
+
+    <form th:action="@{/register}" method="post" class="auth-form">
+      <div class="form-group">
+        <input type="text" name="username" placeholder="Username" required />
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Email" required />
+      </div>
+      <div class="form-group">
+        <input type="password" name="password" placeholder="Password (min 6 chars)" required minlength="6" />
+      </div>
+      <div class="form-group">
+        <button type="submit" class="auth-button">Sign Up</button>
+      </div>
+    </form>
+
+    <!-- Show error message if registration failed -->
+    <div th:if="${error}" class="error-message">
+      <p th:text="${error}"></p>
+    </div>
+
+    <div class="login-footer">
+      <p>Already have an account? <a href="/login">Login here</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer Section -->
+<footer>
+  <p>© 2025 GearedUp. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

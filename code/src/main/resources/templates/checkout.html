@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<h1>Checkout</h1>
+
+<form th:action="@{/checkout}" method="post">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
+    <input type="text" name="address" placeholder="Shipping Address" required /><br/>
+    <input type="text" name="phone" placeholder="Phone Number" required /><br/>
+    <input type="text" name="cardNumber" placeholder="Credit Card Number" required /><br/>
+    <input type="text" name="expMonth" placeholder="Expiration Month" required /><br/>
+    <input type="text" name="expYear" placeholder="Expiration Year" required /><br/>
+    <input type="text" name="cvv" placeholder="CVV" required /><br/>
+
+    <select name="shippingSpeed" required> <option value="Overnight">Overnight ($29)</option>
+        <option value="3-Day">3-Day ($19)</option>
+        <option value="Ground">Ground (Free)</option>
+    </select><br/>
+
+    <button type="submit">Continue</button>
+</form>
+
+</body>
+</html>

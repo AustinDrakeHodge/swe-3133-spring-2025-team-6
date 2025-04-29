@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<h1>Order Receipt</h1>
+
+<div th:each="item : ${order.items}">
+    <h2 th:text="${item.name}"></h2>
+    <p th:text="'$' + ${item.price}"></p>
+</div>
+
+<p>Shipping Address: <span th:text="${order.paymentInformation.shippingAddress}"></span></p>
+<p>Last 4 of Credit Card: <span th:text="${order.paymentInformation.getCreditCardLast4()}"></span></p>
+
+<p>Thank you for your purchase!</p>
+
+<a href="/main">Return to Main Page</a>
+
+</body>
+</html>

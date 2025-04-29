@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Promote User</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="top-bar">
+    <div class="left-section">
+        <a th:href="@{/main}" class="nav-link">Home</a>
+                <a href="/admin/add_inventory" class="nav-link">Add Inventory</a>
+                <a href="/admin/promote_user" class="nav-link">Promote User</a>
+                <a href="/admin/view_sales" class="nav-link">Sales</a>
+    </div>
+</div>
+
+<!-- Page Content -->
+<div class="page-content">
+    <h1>Promote User to Admin</h1>
+    <table class="user-table">
+        <thead class="user-table">
+        <tr class="user-table">
+            <th class="user-table">Promote</th>
+            <th class="user-table">Username</th>
+            <th class="user-table">Is Admin Already?</th>
+        </tr>
+        </thead>
+        <tr th:each="user : ${users}" class="user-table">
+            <form action="promote_user" method="post">
+                <input type="hidden" th:name="username" th:value="${user.username}" />
+                <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+                <!-- Your username input field -->
+                <td class="user-table">
+                    <button type="submit" th:disabled="${user.isAdmin()}">Promote</button>
+                </td>
+
+                <td class="user-table">
+                    <span  th:text="${user.username}"></span>
+                </td>
+                <td class="user-table">
+                    <span th:text="${user.isAdmin()}"></span>
+                </td>
+            </form>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+</html>
