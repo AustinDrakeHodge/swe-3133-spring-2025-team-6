@@ -51,4 +51,4 @@ Now that we have specified the requirements of the system and created a high fid
 Thank you for sticking with us for our project! Here are our instructions for setting up the database
 
 ### Final Video
--[Final Video](/Videos/TechnicalDesign.md)
+- [Final Video](/Videos/TechnicalDesign.md)
