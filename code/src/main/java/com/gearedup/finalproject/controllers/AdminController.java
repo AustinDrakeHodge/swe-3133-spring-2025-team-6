@@ -5,6 +5,7 @@ import com.gearedup.finalproject.entities.User;
 import com.gearedup.finalproject.repositories.UserRepository;
 import com.gearedup.finalproject.services.AdminService;
 import com.gearedup.finalproject.dtos.SaleDTO;
+import com.gearedup.finalproject.services.CartService;
 import com.gearedup.finalproject.services.InventoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,8 +29,17 @@ public class AdminController {
     private final InventoryService inventoryService;
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    private CartService cartService;
 
     private void SetCurrentUser(Model model){
+        var user = getCurrentUser();
+        if (user != null) {
+            model.addAttribute("user", user); // put user into model
+        }
+    }
+
+    private User getCurrentUser(){
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 
         org.springframework.security.core.userdetails.User userDetails =
@@ -37,11 +47,8 @@ public class AdminController {
 
         // If you need full User entity (for userId, email, etc):
         String username = userDetails.getUsername();
-        User user = userRepository.findByUsername(username)
+        return userRepository.findByUsername(username)
             .orElseThrow(() -> new RuntimeException("User not found"));
-        if (user != null) {
-            model.addAttribute("user", user); // put user into model
-        }
     }
 
 
@@ -127,7 +134,16 @@ public class AdminController {
 
     @PostMapping("/delete")
     public String deleteItem(@RequestParam long id){
+        var user = getCurrentUser();
+        var cartItems = cartService.listCartItems(user);
+        var cartItemItemIds = cartItems.stream().map(cartItem -> cartItem.getItem().getId()).toList();
+
+        if (cartItemItemIds.contains(id)) {
+            cartService.removeItemFromCart(id);
+        }
+
         adminService.deleteInventoryItem(id);
+
         return "redirect:/main";
     }
 

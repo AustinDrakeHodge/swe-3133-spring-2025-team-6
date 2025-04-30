@@ -14,7 +14,7 @@
 <div class="page-content">
     <h1>Add New Inventory Item</h1>
 
-    <form th:action="@{/admin/add_inventory}" method="post" enctype="multipart/form-data" class="form-container">
+    <form th:action="@{/admin/add_inventory}" method="post" enctype="multipart/form-data" class="">
   <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
         <div class="form-group">
             <label for="name">Item Name:</label>
