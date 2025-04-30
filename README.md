@@ -44,3 +44,11 @@ Now that we have specified the requirements of the system and created a high fid
 - [Entity Relationship Diagram](/TechnicalDesign/EntityRelationshipDiagram.md)
 ### Technical Design Video
 - [Technical Design Video](/Videos/TechnicalDesign.md)
+
+## Final Design
+
+### Project Setup
+Thank you for sticking with us for our project! Here are our instructions for setting up the database
+
+### Final Video
+- [Final Video](/Videos/TechnicalDesign.md)
