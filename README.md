@@ -48,7 +48,7 @@ Now that we have specified the requirements of the system and created a high fid
 ## Final Design
 
 ### Project Setup
-Thank you for sticking with us for our project! Here are our instructions for setting up the database
+Thank you for sticking with us for our project! Here are our instructions for setting up the database [here](/code/README.md)
 
 ### Final Video
 - [Final Video](/Videos/TechnicalDesign.md)
