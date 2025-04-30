@@ -15,13 +15,13 @@
 - Navigate to where you cloned the git repo, then open "\swe-3133-spring-2025-team-6\code" and double-click pom.xml at the bottom.
 - Click "Open as Project" in the ensuing popup.
 - If you get a "Trust and Open Project?" popup, trust us. It's fine.
--> If you see "project jdk is not defined" errors, click the Menu button in the top left > Project Structure... and set SDK to openjdk-24 (you may have to download it in the same window if your system is out of date).
->> If you set a password other than "team6" in the MySQL setup, you'll need to open code/src/main/resources/application.properties and change "spring.datasource.password" to the one you specified
+- If you see "project jdk is not defined" errors, click the Menu button in the top left > Project Structure... and set SDK to openjdk-24 (you may have to download it in the same window if your system is out of date).
+- If you set a password other than "team6" in the MySQL setup, you'll need to open code/src/main/resources/application.properties and change "spring.datasource.password" to the one you specified
 
 ## Running the program
-> Click the ">" run button at the top in IntelliJ.
-> Open a browser window and navigate to localhost:8080/login
-> There are two initial users you can login with:
->> "user1" : "password"
->> "admin" : "password"
-> user1 has no admin priveleges, while admin does. You can also register to create your own user, but you'll have to use the admin login to promote it or any other user.
+- Click the ">" run button at the top in IntelliJ.
+- Open a browser window and navigate to localhost:8080/login
+- There are two initial users you can login with:
+- "user1" : "password"
+- "admin" : "password"
+- user1 has no admin priveleges, while admin does. You can also register to create your own user, but you'll have to use the admin login to promote it or any other user.
