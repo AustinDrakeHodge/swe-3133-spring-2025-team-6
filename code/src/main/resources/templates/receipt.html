@@ -1,20 +1,73 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
+<head>
+    <meta charset="UTF-8">
+    <title>GearedUp - Receipt</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
 <body>
-<h1>Order Receipt</h1>
 
-<div th:each="item : ${order.items}">
-    <h2 th:text="${item.name}"></h2>
-    <p th:text="'$' + ${item.price}"></p>
+<!-- Top Banner -->
+<div th:replace="fragments/navbar :: body"></div>
+
+<div class="form-container">
+  <div class="form-box">
+    <h2>ItemShop Receipt</h2>
+
+    <!-- Loop through cart items dynamically from backend -->
+    <table th:each="item : ${order.items}">
+      <tbody>
+        <tr>
+          <td><b>Item Name:</b></td>
+          <td th:text="${item.name}"></td>
+        </tr>
+        <tr>
+          <td><b>Price:</b></td>
+          <td th:text="'$' + ${#numbers.formatDecimal(item.price, 1, 'COMMA', 2, 'POINT')}"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <table>
+      <tbody>
+      <tr>
+        <td><strong>Subtotal</strong></td>
+        <td><span th:text="'$' + ${#numbers.formatDecimal(order.subtotal, 1, 'COMMA', 2, 'POINT')}"></span></td>
+      </tr>
+      <tr>
+        <td><strong>Shipping Cost (<span th:text="${order.paymentInformation.shippingSpeed}"></span>):</strong></td>
+        <td><span th:text="'$' + ${order.paymentInformation.shippingCost}"></span></td>
+      </tr>
+      <tr>
+        <td><strong>Tax:</strong></td>
+        <td><span th:text="'$' + ${#numbers.formatDecimal(order.tax, 1, 'COMMA', 2, 'POINT')}"></span></td>
+      </tr>
+      <tr>
+        <td><strong>Grand Total:</strong></td>
+        <td><span th:text="'$' + ${#numbers.formatDecimal(order.grandTotal, 1, 'COMMA', 2, 'POINT')}"></span></td>
+      </tr>
+      </tbody>
+    </table>
+    <table>
+      <tr>
+        <td><strong>Shipping Address:</strong></td>
+        <td th:text="${order.paymentInformation.shippingAddress}"></td>
+      </tr>
+      <tr>
+        <td><strong>Last 4 of Credit Card:</strong></td>
+        <td th:text="${order.paymentInformation.getCreditCardLast4()}"></td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>Thank you for your purchase!</td>
+      </tr>
+      <tr>
+        <td><a href="/main">Return to Main Page</a></td>
+      </tr>
+    </table>
+  </div>
 </div>
-
-<p>Shipping Address: <span th:text="${order.paymentInformation.shippingAddress}"></span></p>
-<p>Last 4 of Credit Card: <span th:text="${order.paymentInformation.getCreditCardLast4()}"></span></p>
-
-<p>Thank you for your purchase!</p>
-
-<a href="/main">Return to Main Page</a>
 
 </body>
 </html>

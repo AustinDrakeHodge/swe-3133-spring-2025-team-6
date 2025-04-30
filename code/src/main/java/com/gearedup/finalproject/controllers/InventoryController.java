@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 @RequiredArgsConstructor
@@ -21,6 +22,7 @@ import java.util.List;
 public class InventoryController {
     private final InventoryService inventoryService;
     private final ItemTypeRepository itemTypeRepository;
+    private final CartService cartService;
     @Autowired
     private UserRepository userRepository;
     @Autowired
@@ -32,29 +34,33 @@ public class InventoryController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         if (auth == null || !(auth.getPrincipal() instanceof org.springframework.security.core.userdetails.User)) {
             return "redirect:/login"; // not logged in properly
-    }
-
-    org.springframework.security.core.userdetails.User userDetails =
-        (org.springframework.security.core.userdetails.User) auth.getPrincipal();
-
-    // If you need full User entity (for userId, email, etc):
-    String username = userDetails.getUsername();
-    User user = userRepository.findByUsername(username)
-    .orElseThrow(() -> new RuntimeException("User not found"));
-        if (user != null) {
-            model.addAttribute("user", user); // put user into model
         }
 
-    for (InventoryItem item : items) {
-        List<ItemPicture> pictures = itemPictureRepository.findByInventoryItem(item);
-        if (!pictures.isEmpty()) {
-            item.setPictures(pictures);
-        }
-    }
+        org.springframework.security.core.userdetails.User userDetails =
+            (org.springframework.security.core.userdetails.User) auth.getPrincipal();
 
-    model.addAttribute("items", items);
-    return "main";
-}
+        // If you need full User entity (for userId, email, etc):
+        String username = userDetails.getUsername();
+        User user = userRepository.findByUsername(username)
+        .orElseThrow(() -> new RuntimeException("User not found"));
+            if (user != null) {
+                model.addAttribute("user", user); // put user into model
+            }
+
+        for (InventoryItem item : items) {
+            List<ItemPicture> pictures = itemPictureRepository.findByInventoryItem(item);
+            if (!pictures.isEmpty()) {
+                item.setPictures(pictures);
+            }
+        }
+
+        var cartItems = cartService.listCartItems(user);
+        var cartItemItemIds = cartItems.stream().map(cartItem -> cartItem.getItem().getId()).toList();
+
+        model.addAttribute("items", items);
+        model.addAttribute("cartItemItemIds", cartItemItemIds);
+        return "main";
+    }
 
 
     @GetMapping("/search")
