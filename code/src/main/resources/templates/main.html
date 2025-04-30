@@ -35,7 +35,7 @@
             <input type="hidden" name="id" th:value="${item.id}" />
             <a th:href="@{/admin/update/{itemId}(itemId=${item.getId()})}" class="update-link">(Edit Item)</a>
             |
-            <button type="submit" class="delete-button">(Delete Item)</button>
+            <button type="submit" class="delete-button" onclick="return confirm('Are you sure you want to delete this item?')">(Delete Item)</button>
         </form>
 
         <p th:text="${item.description}">Description</p>

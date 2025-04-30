@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
+<head>
+    <meta charset="UTF-8">
+    <title>Sales Report</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
 <body>
+
+<!-- Top Banner -->
+<div th:replace="fragments/navbar :: body"></div>
 
 <h1>Checkout</h1>
 
@@ -20,6 +27,7 @@
         <option value="Ground">Ground (Free)</option>
     </select><br/>
 
+    <br/>
     <button type="submit">Continue</button>
 </form>
 

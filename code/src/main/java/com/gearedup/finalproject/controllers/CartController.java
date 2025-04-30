@@ -38,6 +38,7 @@ public class CartController {
 
         List<CartItem> cartItems = cartService.listCartItems(user);
         model.addAttribute("cartItems", cartItems);
+        model.addAttribute("user", user);
 
 
         var cart = cartService.getOrCreateCart(user);

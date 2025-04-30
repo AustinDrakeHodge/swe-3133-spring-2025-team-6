@@ -59,8 +59,23 @@ public class InventoryController {
 
     @GetMapping("/search")
     public String searchInventory(@RequestParam String keyword, Model model) {
+        if (keyword == null || keyword.isEmpty()) {
+            return "redirect:/main";
+        }
+
         List<InventoryItem> items = inventoryService.searchItems(keyword);
         model.addAttribute("items", items);
+
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        org.springframework.security.core.userdetails.User userDetails =
+            (org.springframework.security.core.userdetails.User) auth.getPrincipal();
+        String username = userDetails.getUsername();
+        User user = userRepository.findByUsername(username)
+            .orElseThrow(() -> new RuntimeException("User not found"));
+        if (user != null) {
+            model.addAttribute("user", user); // put user into model
+        }
+
         return "main"; // reuse main.html
     }
 

@@ -96,8 +96,21 @@
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
+                            <version>${lombok.version}</version>
                         </path>
+
                     </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>10.15.0</version>
+                <configuration>
+                    <url>jdbc:mysql://localhost:3306/store_api?createDatabaseIfNotExist</url>
+                    <user>root</user>
+                    <password>team6</password>
+                    <cleanDisabled>false</cleanDisabled>
                 </configuration>
             </plugin>
             <plugin>

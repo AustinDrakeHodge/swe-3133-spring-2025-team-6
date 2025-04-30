@@ -24,17 +24,17 @@
         <tbody>
             <tr th:each="item : ${items}">
                 <td th:text="${item.name}"></td>
-                <td th:text="'$' + ${item.price}"></td>
+                <td th:text="'$' + ${#numbers.formatDecimal(item.price, 1, 'COMMA', 2, 'POINT')}"></td>
             </tr>
         </tbody>
     </table>
 
     <div class="order-summary">
-        <p>Subtotal: <span th:text="'$' + ${subtotal}"></span></p>
-        <p>Tax (6%): <span th:text="'$' + ${tax}"></span></p>
-        <p>Shipping: <span th:text="'$' + ${shipping}"></span></p>
+        <p>Subtotal: <span th:text="'$' + ${#numbers.formatDecimal(subtotal, 1, 'COMMA', 2, 'POINT')}"></span></p>
+        <p>Tax (6%): <span th:text="'$' + ${#numbers.formatDecimal(tax, 1, 'COMMA', 2, 'POINT')}"></span></p>
+        <p>Shipping: <span th:text="'$' + ${#numbers.formatDecimal(shipping, 1, 'COMMA', 2, 'POINT')}"></span></p>
         <hr/>
-        <h2>Grand Total: <span th:text="'$' + ${grandTotal}"></span></h2>
+        <h2>Grand Total: <span th:text="'$' + ${#numbers.formatDecimal(grandTotal, 1, 'COMMA', 2, 'POINT')}"></span></h2>
     </div>
 
     <form th:action="@{/checkout/complete}" method="post">

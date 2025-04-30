@@ -16,7 +16,7 @@
 
 <div th:each="cartItem : ${cartItems}">
     <h2 th:text="${cartItem.item.name}">Item Name</h2>
-    <p th:text="'$' + ${cartItem.item.price}">Price</p>
+    <p th:text="'$' + ${#numbers.formatDecimal(cartItem.item.price, 1, 'COMMA', 2, 'POINT')}">Price</p>
     <form th:action="@{/cart/remove}" method="post">
         <input type="hidden" name="cartItemId" th:value="${cartItem.id}" />
         <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
@@ -25,7 +25,7 @@
     <hr/>
 </div>
 
-Subtotal: <span th:text="${subTotal}">Subtotal</span>
+Subtotal: <span th:text="'$' + ${#numbers.formatDecimal(subTotal, 1, 'COMMA', 2, 'POINT')}">Subtotal</span>
 <br />
 <br />
 

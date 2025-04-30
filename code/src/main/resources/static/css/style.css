@@ -200,6 +200,6 @@ footer {
 .logo {
     max-width: 100px;
     height: auto;
-    display: block;
     margin: 20px auto;
+    text-align: left;
 }

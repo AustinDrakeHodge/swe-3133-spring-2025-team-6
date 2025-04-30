@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Item</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
 <body>
+
+<!-- Top Banner -->
+<div th:replace="fragments/navbar :: body"></div>
+
 <h1>Edit Item</h1>
 
 <form th:action="@{/admin/update}" method="post" enctype="multipart/form-data" class="form-container">

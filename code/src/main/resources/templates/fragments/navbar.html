@@ -15,17 +15,16 @@
         </div>
     </div>
 
-    <div class="right-section">
+    <div class="right-section nav-links">
         <a href="/cart">
             <img src="/images/cart.png" class="cart-icon" alt="Cart">
         </a>
 
-        <div class="dropdown">
-            <button class="dropdown-button">
+        <div class="nav-user">
+                User:
                 <span th:if="${user != null}" th:text="${user.username}"></span>
                 <span th:if="${user == null}">Guest</span>
-            </button>
-            <div class="dropdown-content">
+            <div class="dropdown-content nav-links">
                 <a th:href="@{/login}">Log out</a>
             </div>
         </div>
